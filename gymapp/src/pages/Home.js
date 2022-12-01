@@ -1,9 +1,15 @@
 import React from 'react'
+import{Box} from '@mui/material';
+import HeroBanner from '../components/HeroBanner';
+import SearchExercises from '../components/SearchExercises';
+import Exercises from '../components/Exercises';
 
 export default function Home() {
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+   <Box>
+    <HeroBanner/>
+    <SearchExercises/>
+    <Exercises/>
+   </Box>
   )
 }

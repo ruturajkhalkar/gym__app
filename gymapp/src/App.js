@@ -12,11 +12,11 @@ import Footer from './components/Footer';
 export default function App() {
   return (
     <>
-   <Box width='400px'>
+   <Box width='400px'sx={{width:{xl:'1488'}}} m='auto'>
     <Navbar/>
     <Routes>
-        <Route path='/' eLement={<Home/>}/>
-        <Route path='/exercise/:id' eLement={<ExerciseDetail/>}/>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/exercise/:id' element={<ExerciseDetail/>}/>
     </Routes>
     <Footer/>
    </Box>
