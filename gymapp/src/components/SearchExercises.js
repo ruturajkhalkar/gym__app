@@ -21,8 +21,8 @@ export default function SearchExercises({setExercises,bodyPart,setBodyPart}) {
   
   const handleSearch = async () => {
     if (search) {
-      const exerciseData = await FetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOption)
-      const searchedExercises = exerciseData.filter((exercise)=>exercise.name.toLowerCase().includes(search)
+      const exercisesData = await FetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOption)
+      const searchedExercises = exercisesData.filter((exercise)=>exercise.name.toLowerCase().includes(search)
       || exercise.target.toLowerCase().includes(search)
       || exercise.equipment.toLowerCase().includes(search)
       || exercise.bodyPart.toLowerCase().includes(search)
@@ -40,14 +40,19 @@ export default function SearchExercises({setExercises,bodyPart,setBodyPart}) {
       <Typography fontWeight='700px' sx={{ fontSize: { lg: '44px', xs: '30px' } }} mt='49px' textAlign='center'>
         Awesome Exercises You <br /> Should Know
       </Typography>
-      <Box posit='relative' mb='72px'>
+      <Box position ='relative' mb='72px' justifyContent="center"
+      alignItems='center'
+      >
         <TextField
+        
           height='76px'
-          sx={{ input: { fontWeight: '700', border: 'none', borderRadius: '4px' }, width: { lg: '1170px', xs: '350px' }, backgroundColor: '#fff', borderRadius: '40px' }}
+          sx={{ input: { fontWeight: '700', border: 'none', borderRadius: '4px' },
+           width: { lg: '1170px', xs: '350px' }, backgroundColor: '#fff', borderRadius: '40px' }}
+          
           value={search}
           onChange={(e) => { setSearch(e.target.value.toLowerCase()) }}
           placeholder="Search Exercise"
-          text='type'
+          type='text'
         >
         </TextField>
         <Button className='search-btn'

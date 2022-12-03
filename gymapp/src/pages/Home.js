@@ -4,9 +4,10 @@ import HeroBanner from '../components/HeroBanner';
 import SearchExercises from '../components/SearchExercises';
 import Exercises from '../components/Exercises';
 
-export default function Home({}) {
+export default function Home() {
   const[bodyPart,setBodyPart] = useState('all')
   const [exercises,setExercises] = useState([]) 
+  console.log(bodyPart)
   return (
    <Box>
     <HeroBanner/>
@@ -15,8 +16,8 @@ export default function Home({}) {
      setBodyPart={setBodyPart}
       bodyPart={bodyPart}/>
     <Exercises
+    exercises={exercises}
     setExercises={setExercises}
-    setBodyPart={setBodyPart}
      bodyPart={bodyPart}/>
    </Box>
   )
