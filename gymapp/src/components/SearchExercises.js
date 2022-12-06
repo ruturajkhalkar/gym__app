@@ -8,7 +8,7 @@ import HorizontalScrollbar from './HorizontalScrollbar'
 export default function SearchExercises({setExercises,bodyPart,setBodyPart}) {
 
   const [search, setSearch] = useState('')
-  
+   
   const [bodyParts,setBodyParts] = useState([])
 
   useEffect(()=>{
@@ -36,19 +36,19 @@ export default function SearchExercises({setExercises,bodyPart,setBodyPart}) {
   }
 
   return (
-    <Stack alignitems='center' mt='37' justifyContent='center' p='20px'>
+    <Stack alignItems='center' mt='37' justifyContent='center' p='20px'>
       <Typography fontWeight='700px' sx={{ fontSize: { lg: '44px', xs: '30px' } }} mt='49px' textAlign='center'>
         Awesome Exercises You <br /> Should Know
       </Typography>
-      <Box position ='relative' mb='72px' justifyContent="center"
+      <Box position ='relative' mb='72px' 
       alignItems='center'
       >
         <TextField
         
-          height='76px'
-          sx={{ input: { fontWeight: '700', border: 'none', borderRadius: '4px' },
-           width: { lg: '1170px', xs: '350px' }, backgroundColor: '#fff', borderRadius: '40px' }}
           
+          sx={{ input: { fontWeight: '700', border: 'none', borderRadius: '4px' },
+           width: { lg: '800px', xs: '350px' }, backgroundColor: '#fff', borderRadius: '40px' }}
+          height='76px'
           value={search}
           onChange={(e) => { setSearch(e.target.value.toLowerCase()) }}
           placeholder="Search Exercise"
@@ -60,7 +60,7 @@ export default function SearchExercises({setExercises,bodyPart,setBodyPart}) {
             bgcolor: '#FF2625',
             color: 'fff',
             textTransform: 'none',
-            width: { lg: '173px', xs: '80px' },
+            width: { lg: '150px', xs: '80px' },
             height: '56px', position: 'absolute',
             fontSize: { lg: '20px', xs: '14px' }
           }}
@@ -71,7 +71,7 @@ export default function SearchExercises({setExercises,bodyPart,setBodyPart}) {
       </Box>
       <Box sx={{ position: 'ralative', width: '100%', p: '20px' }}>
            <HorizontalScrollbar data={bodyParts}
-           bodyPart={bodyPart} setBodyPart={setBodyPart}/>
+           bodyPart={bodyPart} setBodyPart={setBodyPart} isBodyPart />
       </Box>
 
     </Stack>

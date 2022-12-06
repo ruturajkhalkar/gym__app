@@ -38,7 +38,7 @@ export default function Exercises({exercises,setExercises,bodyPart}) {
   return (
     <Stack id='exercises' sx={{mt:{lg:'109px'}}} mt='50px' padding='20px'>
      
-     <Typography variant='h3' >
+     <Typography variant='h3' marginBottom='50PX' >
       Showing Result 
      </Typography>
      <Stack direction='row' sx={{gap:{lg:'110px',xs:'50px'}}}
