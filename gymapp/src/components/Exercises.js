@@ -13,7 +13,7 @@ export default function Exercises({exercises,setExercises,bodyPart}) {
   const indexOfLastExercise = currentPage*exercisesPerpage;
   const indexofFirstExercise =  indexOfLastExercise-exercisesPerpage;
   
-  const currentExercise = exercises.slice(indexofFirstExercise,indexOfLastExercise)
+  const currentExercise  = exercises.slice(indexofFirstExercise,indexOfLastExercise)
    const paginate = (e,value)=>{
     setCurretntPage(value)
     window.scrollTo({top:1800,behavior:'smooth'})
